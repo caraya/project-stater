@@ -1,0 +1,72 @@
+@import "https://unpkg.com/open-props" layer(design.system);
+@import "https://unpkg.com/open-props/normalize.min.css" layer(demo.support);
+@import "https://unpkg.com/open-props/buttons.min.css" layer(demo.support);
+@layer properties {
+  @property --content-width {
+    syntax: "<length-percentage>";
+    inherits: true;
+    initial-value: 40vw;
+  }
+
+  @property --background-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(0.99 0.01 116);
+  }
+
+  @property --text-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(0.25 0.01 67.5);
+  }
+
+  @property --accent-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(0.55 0.22 30.2);
+  }
+}
+
+@layer content {
+  :root {
+    font-family: Raleway, sans-serif;
+  }
+
+  .container {
+    --content-width: 80vw;
+    width: var(--content-width);
+    background: var(--background-color);
+    height: var(--content-height);
+    margin-inline: 2em;
+    margin-block: 2em;
+  }
+
+  nav ul{
+    display: flex;
+    flex-flow: row;
+    list-style-type: none;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+
+  :where(.nav-item) {
+    background: var(--background-color);
+    color: var(--accent-color);
+    border: 0;
+    padding: var(--size-0);
+    margin: var(--size-0);
+  }
+
+  h1,
+  p {
+    color: var(--text-color);
+  }
+
+  p {
+    line-height: 1.3em;
+  }
+
+  a {
+    color: var(--accent-color);
+  }
+}
