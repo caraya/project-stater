@@ -49,7 +49,8 @@ The starter includes:
 
 ## TODO
 
-There are a few things that are left to do. I might get around them or I may not.
+There are a few things that are left to do before I call the template ready. I might get around them or I may not.
 
 * Add one or more Passport log in strategies (thinking Google and GitHub)
+  * May skip them because they require association with accounts in the respective systems so they would only be good for me.
 * Flash messages with [connect flash](https://www.npmjs.com/package/connect-flash)
