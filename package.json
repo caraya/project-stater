@@ -11,7 +11,7 @@
     "debug": "~4.4.3",
     "express": "^5.1.0",
     "express-session": "^1.18.2",
-    "morgan": "~1.10.0"
+    "morgan": "~1.10.1"
   },
   "devDependencies": {
     "connect-flash": "^0.1.1",
